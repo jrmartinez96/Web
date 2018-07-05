@@ -1,0 +1,133 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Nav bar
+  ========================================
+*/
+
+.main-nav {
+    background: greenyellow;
+    height: 80px;
+}
+
+.navlist{
+    text-align: right;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-item{
+    display: inline-block;
+    margin-right: 50;
+    padding-top: 25px;
+}
+
+.nav-item:last-child{
+    padding-right: 1%;
+}
+
+
+.nav-item-logo {
+    position: absolute;
+    left: 20px;
+    top: 17px;
+}
+
+.logo-image{
+    width: 150px;
+}
+
+.nav-item-secondary{
+    display: inline-block;
+}
+
+.nav-item-tertiary{
+    display: inline-block;
+}
+
+@media (max-width: 950px) and (min-width: 700px){
+    .main-nav{
+        height: 65px;
+    }
+
+    .nav-item-logo{
+        left: 45%;
+        top: 15px;
+    }
+
+    .nav-item-tertiary{
+        display: none;
+    }
+
+    .nav-item:last-child{
+        padding-top: 15px;
+        margin-right: 20px;
+    }
+
+}
+
+@media (max-width: 700px){
+    .main-nav{
+        height: 45px;
+    }
+
+    .nav-item-logo{
+        left: 50%;
+        top: 10px;
+    }
+
+    .nav-item-tertiary,
+    .nav-item-secondary{
+        display: none;
+    }
+
+    .nav-item:last-child{
+        padding-top: 15px;
+        margin-right: 20px;
+    }
+}
