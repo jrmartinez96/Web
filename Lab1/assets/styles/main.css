@@ -185,12 +185,12 @@ table {
 .trial-form-box{
     background: white;
     bottom: 0;
-    height: 70%;
+    height: 75%;
     left: 0;
     margin:auto;
     position: absolute;
     top: 0;
-    width: 75%;
+    width: 85%;
     border-radius: 5px;
 }
 
@@ -209,12 +209,54 @@ table {
 
 .trial-form-entries{
     display: flex;
-    background: papayawhip;
-    padding: 30px;
+    padding: 0px 30px 0px 30px;
 }
 
-.trial-form-entries div {
+.trial-form-entries div.columna {
     width: 50%;
+}
+
+.trial-form-entries div.columna div.entry{
+    margin-top: 30px;
+}
+
+.trial-form-entries div.columna div.entry label{
+    margin-top: 30px;
+    font-weight: bold;
+    color: rgb(85, 85, 85)
+}
+
+.trial-form-entries div.columna div.entry input{
+    background: rgb(250, 250, 250);
+    border-color: rgb(220, 220, 220);
+    border-radius: 5px;
+    border-style: solid;
+    font-size: 16px;
+    height: 45px;
+    margin-top: 10px;
+    outline: none;
+    text-indent: 13px;
+    width: 95%;
+}
+
+.trial-form-entries div.columna div.entry input:focus{
+    background: white;
+    border-color: rgb(143, 143, 143);
+}
+
+.trial-form-checkbox{
+    margin: 25px 25px 25px 35px;
+    font-size: 14px;
+    outline: none;
+    border-bottom: 1px;
+    border-color: rgba(128, 128, 128, 0.315);
+    border-style: solid;
+    padding-bottom: 25px;
+}
+
+.trial-form-checkbox input[type=checkbox]{
+    color: white;
+    background-color: white;
 }
 
         /*#endregion*/
