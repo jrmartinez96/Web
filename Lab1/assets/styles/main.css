@@ -62,7 +62,7 @@ table {
 
 .main-nav {
     background: white;
-    height: 80px;
+    height: 70px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -73,7 +73,7 @@ table {
     margin: 0 auto;
     position: relative;
     text-align: right;
-    width: 80%;
+    width: 85%;
 }
 
 
@@ -86,16 +86,16 @@ table {
 
 .nav-item-logo {
     position: absolute;
-    left: 20px;
+    left: 40px;
     top: 17px;
 }
 
 .logo-image{
-    width: 30px;
+    width: 29px;
 }
 
 .logo-name{
-    width: 115px;
+    width: 110px;
 }
 
 .nav-item-secondary{
@@ -119,12 +119,13 @@ table {
     background-image: url("../firstblock-background.png");
     background-size: cover;
     height: auto;
-    margin-top: 80px;
+    margin-top: 70px;
+    padding-top: 20px;
 }
 
 .trial-block-1{
     display: flex;
-    height: 600px;
+    height: 562px;
     width: 100%;
 }
 
@@ -145,7 +146,6 @@ table {
 .trial-text-info{
     bottom: 0;
     height: 30%;
-    left: 0;
     margin:auto;
     position: absolute;
     right: 0;
@@ -184,23 +184,23 @@ table {
 
 .trial-form-box{
     background: white;
+    border-radius: 5px;
     bottom: 0;
-    height: 75%;
+    height: 78%;
     left: 0;
     margin:auto;
     position: absolute;
     top: 0;
-    width: 85%;
-    border-radius: 5px;
+    width: 75%;
 }
 
 .trial-form-title{
     background: rgb(233, 233, 233);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    text-align: center;
-    padding-top: 25px;
     padding-bottom: 25px;
+    padding-top: 25px;
+    text-align: center;
 }
 
 .trial-form-title span{
@@ -221,9 +221,9 @@ table {
 }
 
 .trial-form-entries div.columna div.entry label{
-    margin-top: 30px;
+    color: rgb(85, 85, 85);
     font-weight: bold;
-    color: rgb(85, 85, 85)
+    margin-top: 30px;
 }
 
 .trial-form-entries div.columna div.entry input{
@@ -244,25 +244,87 @@ table {
     border-color: rgb(143, 143, 143);
 }
 
+.trial-form-entries div.columna div.entry input:hover{
+    border-color: rgb(143, 143, 143);
+}
+
 .trial-form-checkbox{
-    margin: 25px 25px 25px 35px;
-    font-size: 14px;
-    outline: none;
     border-bottom: 1px;
     border-color: rgba(128, 128, 128, 0.315);
     border-style: solid;
+    font-size: 14px;
+    margin: 25px 25px 25px 35px;
+    outline: none;
     padding-bottom: 25px;
 }
 
 .trial-form-checkbox input[type=checkbox]{
-    color: white;
     background-color: white;
+    color: white;
+}
+
+.trial-form-submitbutton{
+    background: #387bab;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    width: 90%;
+}
+
+.trial-form-submitbutton:hover{
+    background: #2a5d81;
 }
 
         /*#endregion*/
+
+        /*#region trial-block-items*/
+        /*
+        ========================================
+        Items block
+        ========================================
+        */ 
+.trial-block-content-items{
+    color: white;
+    padding-bottom: 35px;
+}
+
+.trial-block-content-items ul{
+    text-align: center
+}
+
+.trial-block-content-items ul li{
+    display: inline-block;
+    font-size: 1.125rem;
+    margin-right: 50px;
+}
+
+.trial-block-content-items ul li span{
+    display: inline-block;
+    font-size: 2.25rem;
+}
+
+        /*#endregion*/
+
+/*#endregion*/
+
+/*#region qualities-block*/
+/*
+  ========================================
+  QUALITIES BLOCK
+  ========================================
+*/
+
+.qualities-block{
+    height: 500px;
+}
+
 /*#endregion*/
 
 /*#region media*/
+
 /*
   ========================================
   MEDIA (cambio de tamaño de pantalla)
@@ -339,7 +401,7 @@ table {
     }
 
     .trial-form-box{
-        height: 50%;
+        height: auto;
         margin:auto;
         position: static;
         width: 90%;
@@ -409,10 +471,20 @@ table {
     }
 
     .trial-form-box{
-        height: 50%;
+        height: auto;
         margin:auto;
         position: static;
         width: 90%;
     }
+
+    .trial-form-entries{
+        display: block;
+    }
+
+    .trial-form-entries div.columna {
+        width: 100%;
+    }
 }
 /*#endregion*/
+
+
