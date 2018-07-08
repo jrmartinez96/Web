@@ -431,7 +431,7 @@ table {
 */
 .partnerships-block{
     font-size: 36px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
     text-align: center;
     width: 90%;
 }
@@ -466,6 +466,72 @@ table {
 }
 
 /*#endregion partnerships-block*/
+
+/*#region techdegree-block*/
+
+.techdegree-block{
+    background: rgb(240, 240, 240);
+    overflow: hidden;
+}
+
+.techdegree-block div.techdegree-box{
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    height: 451px;
+    margin: 75px auto;
+    width: 80%;
+}
+
+.techdegree-box div.chris-stone{
+    background: url(https://static.teamtreehouse.com/assets/views/marketing/home/chris-stone-7e346d6d0a111dec7368acc731a9e9fc87d467ee7402fa5a54c5b673a342635e.png) left/cover no-repeat;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    position: relative;
+    width: 42%;
+}
+
+.techdegree-box div.chris-stone div{
+    bottom: 20px;
+    color: white;
+    left: 30px;
+    line-height: 25px;
+    position: absolute;
+    right: 30px;
+}
+
+.techdegree-box div.chris-stone div span{
+    color: gray;
+    font-size: 14px;
+}
+
+.techdegree-box div.techdegree{
+    display: flex;
+    width: 58%;
+}
+
+.techdegree-box div.techdegree div.information{
+    width: 60%;
+}
+
+.techdegree-box div.techdegree div.techdegree-logo{
+    position: relative;
+    width: 40%;
+}
+
+.techdegree-box div.techdegree div.techdegree-logo img{
+    bottom: 0;
+    display: block;
+    height: 150px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+}
+
+/*#endregion techdegree-block*/
 
 /*#region media*/
 /*
