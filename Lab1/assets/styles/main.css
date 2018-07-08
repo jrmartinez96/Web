@@ -511,24 +511,64 @@ table {
 }
 
 .techdegree-box div.techdegree div.information{
-    width: 60%;
+    width: 65%;
+    padding: 60px 50px;
 }
 
 .techdegree-box div.techdegree div.techdegree-logo{
     position: relative;
-    width: 40%;
+    width: 35%;
+}
+
+.techdegree-box div.techdegree div.information div.title{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.techdegree-box div.techdegree div.information ul li{
+    margin-top: 40px;
+    color: rgb(107, 107, 107);
+}
+
+.techdegree-box div.techdegree div.information ul li img{
+    height: 1.5rem;
+    margin-right: 5px;
+}
+
+.techdegree-box div.techdegree div.information div.learn-more{
+    background: #674993;
+    height: 52px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 35px;
+    width: 90%;;
+    
+}
+
+.techdegree-box div.techdegree div.information div.learn-more div.title{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-size: 16px;
+    height: 16px;
+    width: 100px;
+    font-weight: bold;
+    color: white;
 }
 
 .techdegree-box div.techdegree div.techdegree-logo img{
     bottom: 0;
     display: block;
-    height: 150px;
+    height: 155px;
     left: 0;
     margin: auto;
     position: absolute;
     right: 0;
     top: 0;
-    width: 150px;
+    width: 155px;
 }
 
 /*#endregion techdegree-block*/
