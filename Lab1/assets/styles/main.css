@@ -32,9 +32,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
-  line-height: 1;
   font-family: "Gotham Rounded A", "Gotham Rounded B", Helvetica, Arial, sans-serif;
   font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1;
 }
 ol, ul {
   list-style: none;
@@ -66,6 +67,7 @@ table {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
     
 }
 
@@ -318,13 +320,154 @@ table {
 */
 
 .qualities-block{
-    height: 500px;
+    background-color: rgb(250, 250, 250);
+    background-image: url("../secondblock-background.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: auto;
 }
 
-/*#endregion*/
+        /*#region flexible-quality*/
+        /*
+        ========================================
+        FLEXIBLE QUALITY
+        ========================================
+        */
+
+.qualities-block-flexible{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.288);
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    width: 82%;
+
+}
+
+.qualities-block-flexible-video{
+    text-align: right;
+    width: 65%;
+}
+
+.qualities-block-flexible-video-image{
+    border-radius: 5px;
+    margin: 80px 30px auto auto;
+    width: 95%;
+}
+
+.qualities-block-flexible-description{
+    width: 35%;
+}
+
+.qualities-block-flexible-description div.text{
+    line-height: 30px;
+    margin: 100px 10% auto auto;
+}
+
+.qualities-block-flexible-description div.text div.title{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.qualities-block-flexible-description div.text div.description{
+    color: gray;
+    margin-top: 20px;
+}
+        /*#endregion flexible-quality*/
+
+        /*#region supportive-valuable*/
+        /*
+        ========================================
+        SUPORTIVE VALUABLE QUALITY
+        ========================================
+        */
+.qualities-block-supportive-valuable{
+    display: flex;
+    line-height: 30px;
+    margin: 75px auto;
+    padding-bottom: 50px;
+    width: 82%;
+}
+
+.qualities-block-supportive-valuable div.supportive{
+    padding-left: 25px;
+    width: 50%;
+}
+
+.qualities-block-supportive-valuable div.valuable{
+    padding-left: 25px;
+    width: 50%;
+}
+
+.qualities-block-supportive-valuable div div.title{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.qualities-block-supportive-valuable div div.description{
+    color: gray;
+    margin-top: 15px;
+    width: 85%;
+}
+
+.qualities-block-supportive-valuable div div.image{
+    margin: 50px auto 0 auto;
+}
+
+.qualities-block-supportive-valuable div div.image img{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+        /*#endregion supportive-valuable*/
+
+/*#endregion qualities-block*/
+
+/*#region partnerships-block*/
+/*
+  ========================================
+  PARTNERSHIPS BLOCK
+  ========================================
+*/
+.partnerships-block{
+    font-size: 36px;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+}
+
+.partnerships-block div.title{
+    margin-bottom: 50px;
+}
+
+.partnerships-block ul li{
+    display: inline-block;
+}
+
+.partnerships-block ul li img{
+    display: block;
+    padding: 0 24 80 24;
+}
+
+.partnerships-block ul li img.google{
+    width: 300px;
+}
+
+.partnerships-block ul li img.ibm{
+    width: 230px;
+}
+
+.partnerships-block ul li img.amazon{
+    width: 248px;
+}
+
+.partnerships-block ul li img.microsoft{
+    width: 206px;
+}
+
+/*#endregion partnerships-block*/
 
 /*#region media*/
-
 /*
   ========================================
   MEDIA (cambio de tamaño de pantalla)
@@ -332,13 +475,13 @@ table {
 */
 
 @media (max-width: 950px) and (min-width: 700px){
-
+    /*#region nav-bar-media*/
     /*
     ======================
     NAV BAR MEDIA
     ======================
     */
-    /*#region nav-bar-media*/
+
     .main-nav{
         height: 65px;
     }
@@ -367,6 +510,8 @@ table {
     }
     /*#endregion*/
 
+
+    /*#region trial-block-media*/
     /*
     ======================
     TRIAL BLOCK MEDIA
@@ -406,10 +551,78 @@ table {
         position: static;
         width: 90%;
     }
+    /*#endregion trial-block-media*/
 
+    /*#region qualities-block-media*/
+    /*
+    ======================
+    QUALITITES BLOCK MEDIA
+    ======================
+    */
+            /*
+            ======================
+            QUALITITES BLOCK MEDIA FLEXIBLE
+            ======================
+            */
+    .qualities-block-flexible{
+        display: block;
+        width: 92%;
+    }
+
+    .qualities-block-flexible-video{
+        text-align: center;
+        width: 100%;
+    }
+
+    .qualities-block-flexible-video-image{
+        border-radius: 5px;
+        margin: 80px auto auto auto;
+        width: 95%;
+    }
+
+    .qualities-block-flexible-description{
+        width: 100%;
+    }
+    
+    .qualities-block-flexible-description div.text{
+        line-height: 30px;
+        margin: 30px 20px auto 20px;
+    }
+
+            /*
+            ======================
+            QUALITITES BLOCK MEDIA SUPPORTIVE VALUABLE
+            ======================
+            */
+
+    .qualities-block-supportive-valuable{
+        display: block;
+        line-height: 30px;
+        margin: 75px auto;
+        width: 92%;
+    }
+
+    .qualities-block-supportive-valuable div.supportive{
+        width: 100%;
+    }
+    
+    .qualities-block-supportive-valuable div.valuable{
+        width: 100%;
+    }
+
+    .qualities-block-supportive-valuable div div.image img{
+        width: 35%;
+    }
+    /*#endregion qualities-block-media*/
 }
 
 @media (max-width: 700px){
+    /*#region nav-bar-media*/
+    /*
+    ======================
+    NAV BAR MEDIA
+    ======================
+    */
     .main-nav{
         height: 45px;
     }
@@ -436,10 +649,12 @@ table {
     .logo-name{
         display: none;
     }
+    /*#endregion nav-bar-media*/
 
+    /*#region trial-block-media*/
     /*
     ======================
-    FIRST BLOCK
+    TRIAL BLOCK
     ======================
     */
     .trial-block{
@@ -484,6 +699,69 @@ table {
     .trial-form-entries div.columna {
         width: 100%;
     }
+    /*#endregion trial-block-media*/
+
+    /*#region qualities-block-media*/
+    /*
+    ======================
+    QUALITITES BLOCK MEDIA
+    ======================
+    */
+            /*
+            ======================
+            QUALITITES BLOCK MEDIA FLEXIBLE
+            ======================
+            */
+    .qualities-block-flexible{
+        display: block;
+        width: 92%;
+    }
+
+    .qualities-block-flexible-video{
+        text-align: center;
+        width: 100%;
+    }
+
+    .qualities-block-flexible-video-image{
+        border-radius: 5px;
+        margin: 80px auto auto auto;
+        width: 95%;
+    }
+
+    .qualities-block-flexible-description{
+        width: 100%;
+    }
+    
+    .qualities-block-flexible-description div.text{
+        line-height: 30px;
+        margin: 30px 20px auto 20px;
+    }
+
+            /*
+            ======================
+            QUALITITES BLOCK MEDIA SUPPORTIVE VALUABLE
+            ======================
+            */
+
+    .qualities-block-supportive-valuable{
+        display: block;
+        line-height: 30px;
+        margin: 75px auto;
+        width: 92%;
+    }
+
+    .qualities-block-supportive-valuable div.supportive{
+        width: 100%;
+    }
+    
+    .qualities-block-supportive-valuable div.valuable{
+        width: 100%;
+    }
+
+    .qualities-block-supportive-valuable div div.image img{
+        width: 35%;
+    }
+    /*#endregion qualities-block-media*/
 }
 /*#endregion*/
 
