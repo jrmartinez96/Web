@@ -95,7 +95,7 @@ table {
 
 .nav-item{
     display: inline-block;
-    margin-right: 50;
+    margin-right: 50px;
     padding-top: 25px;
 }
 
@@ -464,7 +464,7 @@ table {
 
 .partnerships-block ul li img{
     display: block;
-    padding: 0 24 80 24;
+    padding: 0 24px 80px 24px;
 }
 
 .partnerships-block ul li img.google{
