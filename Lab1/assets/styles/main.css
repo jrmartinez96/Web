@@ -468,7 +468,11 @@ table {
 /*#endregion partnerships-block*/
 
 /*#region techdegree-block*/
-
+/*
+  ========================================
+  TECHDEGREE BLOCK
+  ========================================
+*/
 .techdegree-block{
     background: rgb(240, 240, 240);
     overflow: hidden;
@@ -478,7 +482,7 @@ table {
     background: white;
     border-radius: 5px;
     display: flex;
-    height: 451px;
+    height: auto;
     margin: 75px auto;
     width: 80%;
 }
@@ -540,8 +544,8 @@ table {
     height: 52px;
     border-radius: 5px;
     position: relative;
-    margin-top: 35px;
-    width: 90%;;
+    width: 80%;
+    margin: 35px 0 0 0;
     
 }
 
@@ -562,16 +566,65 @@ table {
 .techdegree-box div.techdegree div.techdegree-logo img{
     bottom: 0;
     display: block;
-    height: 155px;
     left: 0;
     margin: auto;
     position: absolute;
     right: 0;
     top: 0;
-    width: 155px;
+    width: 75%;
 }
 
 /*#endregion techdegree-block*/
+
+/*#region content-block*/
+/*
+  ========================================
+  CONTENT BLOCK
+  ========================================
+*/
+.content-block{
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    padding: 75px 50px 75px 0;
+    line-height: 30px;
+    color: gray;
+    letter-spacing: 0px;
+}
+
+.content-block div.logo{
+    width: 33.33%;
+}
+
+.content-block div.logo div.content{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.content-block div.logo div.content img{
+    width: 150px;
+    display: block;
+}
+
+.content-block div.content-1{
+    width: 16.665%;
+}
+
+.content-block div.content-2{
+    width: 16.665%;
+}
+
+.content-block div.social-media{
+    width: 33.33%;
+    text-align: right;
+}
+
+.content-block div.social-media img{
+    width: 200px;
+    margin-right: 100px;
+}
+
+/*#endregion content-block*/
 
 /*#region media*/
 /*
@@ -615,7 +668,6 @@ table {
         display: none;
     }
     /*#endregion*/
-
 
     /*#region trial-block-media*/
     /*
@@ -720,6 +772,81 @@ table {
         width: 35%;
     }
     /*#endregion qualities-block-media*/
+
+    /*#region  techdegree-block*/
+    /*
+    ======================
+    TECHDEGREE BLOCK MEDIA
+    ======================
+    */
+
+    .techdegree-block div.techdegree-box{
+        display: block;
+        height: auto;
+        margin: 75px auto;
+        width: 90%;
+        padding-bottom: 75px;
+    }
+
+    .techdegree-box div.chris-stone{
+        border-top-right-radius: 5px;
+        width: 100%;
+        height: 350px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .techdegree-box div.techdegree{
+        display: block;
+        width: 100%;
+    }
+
+    .techdegree-box div.techdegree div.information{
+        width: 100%;
+        padding: 60px 50px;
+    }
+
+    .techdegree-box div.techdegree div.techdegree-logo{
+        width: 100%;
+    }
+
+    .techdegree-box div.techdegree div.techdegree-logo img{
+        margin: 0 auto;
+        position: static;
+        width: 150px;
+    }
+    /*#endregion  techdegree-block*/
+
+    /*#region content-block*/
+    /*
+    ========================================
+    CONTENT BLOCK
+    ========================================
+    */
+    .content-block{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        padding-left: 30px;
+        line-height: 25px;
+    }
+
+    .content-block div.logo{
+        width: 100%;
+    }
+
+    .content-block div.logo div.content{
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .content-block div.content-1{
+        width: 100%;
+    }
+    
+    .content-block div.content-2{
+        width: 100%;
+    }
+    /*#endregion content-block*/
 }
 
 @media (max-width: 700px){
@@ -868,6 +995,81 @@ table {
         width: 35%;
     }
     /*#endregion qualities-block-media*/
+
+    /*#region  techdegree-block*/
+    /*
+    ======================
+    TECHDEGREE BLOCK MEDIA
+    ======================
+    */
+
+    .techdegree-block div.techdegree-box{
+        display: block;
+        height: auto;
+        margin: 75px auto;
+        width: 90%;
+        padding-bottom: 75px;
+    }
+
+    .techdegree-box div.chris-stone{
+        border-top-right-radius: 5px;
+        width: 100%;
+        height: 350px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .techdegree-box div.techdegree{
+        display: block;
+        width: 100%;
+    }
+
+    .techdegree-box div.techdegree div.information{
+        width: 100%;
+        padding: 60px 50px;
+    }
+
+    .techdegree-box div.techdegree div.techdegree-logo{
+        width: 100%;
+    }
+
+    .techdegree-box div.techdegree div.techdegree-logo img{
+        margin: 0 auto;
+        position: static;
+        width: 150px;
+    }
+    /*#endregion  techdegree-block*/
+
+    /*#region content-block*/
+    /*
+    ========================================
+    CONTENT BLOCK
+    ========================================
+    */
+    .content-block{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        padding-left: 30px;
+        line-height: 25px;
+    }
+
+    .content-block div.logo{
+        width: 100%;
+    }
+
+    .content-block div.logo div.content{
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .content-block div.content-1{
+        width: 100%;
+    }
+    
+    .content-block div.content-2{
+        width: 100%;
+    }
+    /*#endregion content-block*/
 }
 /*#endregion*/
 
