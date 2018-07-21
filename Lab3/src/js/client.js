@@ -14,14 +14,36 @@
 const state = {
   actualTab: "all",
   lastID: 99999999,
-  todoItems: [{"id": 1, "title": "hola", "isCompleted": true}, {"id": 2, "title": "amigos", "isCompleted": false},{"id": 3, "title": "hola", "isCompleted": true}, {"id": 4, "title": "amigos", "isCompleted": true}],
+  todoItems: [],
+  pendingItems: []
 };
+
+const delay = timeMs => new Promise(
+  (resolve, reject) => setTimeout(
+    resolve,
+    timeMs,
+  )
+);
 
 const render = lState => {
   // Clear previous root content
   if (root.hasChildNodes()) {
     root.innerHTML = null;
   }
+
+  //#region promise json
+  //Promise JSON
+  if(lState.todoItems.length == 0){
+    delay(3000).then(()=>fetch("https://raw.githubusercontent.com/samuelchvez/todos-fake-json-api/master/db.json").then(req =>
+        req.json().then((data) =>
+          lState.todoItems = data
+        ).then(() =>
+          render(lState)
+          )
+      )
+    );
+  }
+  //#endregion promise json
 
   //#region Nav Bar tab
   const navBar = document.createElement('div');
@@ -91,6 +113,30 @@ const render = lState => {
   activeTab.appendChild(navItemTitleActive);
 
   //#endregion
+
+  //#region Loading animation
+
+  if(lState.todoItems.length == 0){
+    const loadingBox = document.createElement('div');
+    loadingBox.className = "loading-box";
+
+    const firstCircleBox = document.createElement('div');
+    firstCircleBox.className = "circle-box first";
+
+    const secondCircleBox = document.createElement('div');
+    secondCircleBox.className = "circle-box second";
+
+    const thirdCircleBox = document.createElement('div');
+    thirdCircleBox.className = "circle-box third";
+
+    root.appendChild(loadingBox);
+    loadingBox.appendChild(firstCircleBox);
+    loadingBox.appendChild(secondCircleBox);
+    loadingBox.appendChild(thirdCircleBox);
+  }
+  
+
+  //#endregion Loading animation
 
   //#region TODO List
   /* La caja qe contiene la lista dentro */
@@ -232,6 +278,41 @@ const render = lState => {
 
   //#endregion TODO List
 
+  //#region PENDING TODO List
+
+  if(lState.pendingItems.length != 0){
+    /* La caja qe contiene la lista dentro */
+    const pendingListBox = document.createElement('div');
+    pendingListBox.className = "list-box pending-list";
+
+    /* La lista que contiene a sus items */
+    const pendingList = document.createElement('ul');
+    pendingList.className = "todo-list"
+
+    /* Ciclo que agrega todos los items que se encuentran dentro de todoItems del state */
+    lState.pendingItems.forEach(item => {
+      // Se crea un item, si tiene la propiedad de completed
+      // se le agrega la clase de "completed" para pintarlo de verde
+      const listItem = document.createElement('li');
+      
+      listItem.className = "list-item pending-item";
+
+      // Se crea un dive con clase title dentro del item para
+      // que se pueda centrar el texto verticalmente
+      const listItemTitle = document.createElement('div');
+      listItemTitle.className = "title"
+      listItemTitle.innerHTML = item["title"];
+
+      pendingList.appendChild(listItem);
+      listItem.appendChild(listItemTitle);
+    });
+
+    root.appendChild(pendingListBox);
+    pendingListBox.appendChild(pendingList);
+  }
+
+  //#endregion Pending TODO List
+
   //#region Input box
   const inputBottomBox = document.createElement('div');
   inputBottomBox.className = "input-bottom-box";
@@ -247,13 +328,26 @@ const render = lState => {
   buttonAdd.className = "button-add";
   buttonAdd.innerHTML = "ADD"
   buttonAdd.onclick = () => {
-    let newTodo = {"id": 0, "title": "", "isCompleted": false};
-    newTodo["id"] = lState.lastID + 1;
-    lState.lastID = newTodo["id"];
-    newTodo["title"] = inputText.value;
-    lState.todoItems.push(newTodo);
-    render(lState);
-  }
+    if(inputText.value != ""){
+      let newTodo = {"id": 0, "title": "", "isCompleted": false};
+      newTodo["id"] = lState.lastID + 1;
+      lState.lastID = newTodo["id"];
+      newTodo["title"] = inputText.value;
+      let pendingItemsId = lState.pendingItems.length;
+      lState.pendingItems.push(newTodo);
+      render(lState);
+
+      const timeDelay = Math.floor(Math.random() * 10000);
+
+      delay(timeDelay).then(()=>
+        deleteFromPending(newTodo,lState)
+      ).then(()=>
+        lState.todoItems.push(newTodo)
+      ).then(()=>
+        render(lState)
+      );
+    }
+  };
 
   root.appendChild(inputBottomBox);
   inputBottomBox.appendChild(inputBox);
@@ -261,6 +355,16 @@ const render = lState => {
   inputBox.appendChild(buttonAdd);
 
   //#endregion Input box
+};
+
+const deleteFromPending = (newTodo,lState) => {
+  for (let i = 0; i < lState.pendingItems.length; i+=1) {
+    const item = lState.pendingItems[i];
+    if(item["id"] == newTodo["id"]){
+      lState.pendingItems.splice(i,1);
+      i = lState.pendingItems.length;
+    }
+  }
 };
 
 render(state);

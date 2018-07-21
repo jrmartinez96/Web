@@ -66,6 +66,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     height: 1vh;
     width: 100%;
+    color: rgb(94, 94, 94);
 }
 
 /* #region Nav bar tab */
@@ -165,9 +166,22 @@ body{
     background: rgb(186,245, 187);
 }
 
+/* Pending list box*/
+.list-box.pending-list{
+    background: rgb(243, 243, 243);
+    margin-top: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.20);
+}
+
+/* Pending list item*/
+.list-item.pending-item{
+    cursor: auto;
+}
+
 /* #endregion Todo List */
 
 /* #region Input */
+
 .input-bottom-box{
     position: fixed;
     height: 4rem;
@@ -219,3 +233,99 @@ body{
 }
 
 /* #endregion Input */
+
+
+.loading-box{
+    width: 9rem;
+    height: 3rem;
+    display: flex;
+    margin: 0 auto;
+}
+
+.circle-box{
+    flex-grow: 1;
+}
+
+.circle-box.first{
+    animation: first-circle-move 1s linear infinite;
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 1.5rem;
+}
+
+.circle-box.second{
+    animation: second-circle-move 1s linear infinite;
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 1.5rem;
+}
+
+.circle-box.third{
+    animation: third-circle-move 1s linear infinite;
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 1.5rem;
+}
+
+@keyframes first-circle-move{
+    0%{
+        transform: scale(0.5);
+    }
+
+    25%{
+        transform: scale(0.75)
+    }
+
+    50%{
+        transform: scale(1.0);
+    }
+
+    75%{
+        transform: scale(0.75);
+    }
+
+    100%{
+        transform: scale(0.5);
+    }
+}
+
+@keyframes second-circle-move{
+    0%{
+        transform: scale(0.75);
+    }
+
+    25%{
+        transform: scale(1.0)
+    }
+
+    50%{
+        transform: scale(0.75);
+    }
+
+    75%{
+        transform: scale(0.5);
+    }
+
+    100%{
+        transform: scale(0.75);
+    }
+}
+
+@keyframes third-circle-move{
+    0%{
+        transform: scale(1.0);
+    }
+
+    25%{
+        transform: scale(0.75)
+    }
+
+    50%{
+        transform: scale(0.5);
+    }
+
+    75%{
+        transform: scale(0.75);
+    }
+
+    100%{
+        transform: scale(1.0);
+    }
+}
