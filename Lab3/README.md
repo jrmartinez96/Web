@@ -1,2 +1,2 @@
-# basic-webpack-setup
-Basic webpack setup to test ES6
+# Laboratorio 3, Web
+
