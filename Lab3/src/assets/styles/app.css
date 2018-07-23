@@ -234,7 +234,7 @@ body{
 
 /* #endregion Input */
 
-
+/*#region loading animation*/
 .loading-box{
     width: 9rem;
     height: 3rem;
@@ -329,3 +329,5 @@ body{
         transform: scale(1.0);
     }
 }
+/*#endregion loading animation*/
+

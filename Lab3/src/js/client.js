@@ -323,6 +323,14 @@ const render = lState => {
   const inputText = document.createElement('input');
   inputText.type = "text";
   inputText.className = "input-text";
+  inputText.autofocus = true;
+  inputText.focus();
+
+  inputText.onkeypress = (event) => {
+    if(event.key == "Enter"){
+      buttonAdd.onclick();
+    }
+  };
 
   const buttonAdd = document.createElement('div');
   buttonAdd.className = "button-add";
