@@ -1,10 +1,10 @@
 .board{
-    height: 40rem;
-    width: 40rem;
-    margin: 0 auto;
+    height: 20rem;
+    width: 20rem;
+    margin: 20px auto 0 auto;
 }
 
 .row{
     display: flex;
-    height: 20rem;
+    height: 10rem;
 }

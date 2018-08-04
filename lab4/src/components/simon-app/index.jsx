@@ -6,15 +6,15 @@ class SimonApp extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            bottomText: "",
             buttonColorsEnable: true,
             buttonStartEnable: true,
             colorOn: -1,
             colors: ['red', 'blue', 'green', 'yellow'],
             colorsList: [],
-            positionColorList: -1,
-            positionColorClick:0,
             inGame: false,
-            bottomText: "",
+            positionColorClick:0,
+            positionColorList: -1,
             score: 0
         }
     }
@@ -33,9 +33,24 @@ class SimonApp extends React.Component{
                 this.setState({colorOn: -1, positionColorList:-1, buttonColorsEnable:true});
             } else {
                 this.setState({positionColorList:newPosition, colorOn:this.state.colorsList[this.state.positionColorList]});
+                switch (this.state.colorOn) {
+                    case 0:
+                        this.firstColor.play();
+                        break;
+                    case 1:
+                        this.secondColor.play();
+                        break;
+                    case 2:
+                        this.thirdColor.play();
+                        break;
+                    case 3:
+                        this.fourthColor.play();
+                        break;
+                    default:
+                        break;
+                }
                 setTimeout(() => {
                     this.setState({colorOn: -1});
-                    console.log("a")
                 }, 400);
                 
             }
@@ -57,6 +72,22 @@ class SimonApp extends React.Component{
         if(this.state.buttonColorsEnable && this.state.inGame){
             const color = this.state.colors[this.state.colorsList[this.state.positionColorClick]];
             if(color === colorClicked){
+                switch (this.state.colorsList[this.state.positionColorClick]) {
+                    case 0:
+                        this.firstColor.play();
+                        break;
+                    case 1:
+                        this.secondColor.play();
+                        break;
+                    case 2:
+                        this.thirdColor.play();
+                        break;
+                    case 3:
+                        this.fourthColor.play();
+                        break;
+                    default:
+                        break;
+                }
 
                 this.setState({positionColorClick:this.state.positionColorClick+1});
                 
@@ -72,9 +103,9 @@ class SimonApp extends React.Component{
                     newColorList.pop();
                 }
 
-                this.setState({bottomText:"Incorrect. You Lost! :("})
+                this.setState({bottomText:"Incorrect! You Lost :("})
                 setTimeout(() => {
-                    this.setState({bottomText:"",buttonStartEnable:true})
+                    this.setState({bottomText:"",buttonStartEnable:true,inGame: false, score:0})
                 }, 2000);
             }
         }
@@ -96,7 +127,24 @@ class SimonApp extends React.Component{
                     Start Game 
                 </div>
 
-                <div> {this.state.bottomText} </div>
+                <div className="bottom-text"> {this.state.bottomText} </div>
+
+                <audio ref={(firstColor) => { this.firstColor = firstColor; }}>
+                    <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" type="audio/mpeg" >
+                    </source>
+                </audio>
+                <audio ref={(secondColor) => { this.secondColor = secondColor; }}>
+                    <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"type="audio/mpeg" >
+                    </source>
+                </audio>
+                <audio ref={(thirdColor) => { this.thirdColor = thirdColor; }}>
+                    <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" type="audio/mpeg" >
+                    </source>
+                </audio>
+                <audio ref={(fourthColor) => { this.fourthColor = fourthColor; }}>
+                    <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" type="audio/mpeg" >
+                    </source>
+                </audio>
             </Fragment>
         );
     }

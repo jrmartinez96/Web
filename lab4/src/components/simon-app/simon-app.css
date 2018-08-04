@@ -20,3 +20,9 @@
     background: rgb(116, 191, 194);
     cursor: pointer;
 }
+
+.bottom-text{
+    font-size: 2rem;
+    margin: 20px auto;
+    color:white;
+}
