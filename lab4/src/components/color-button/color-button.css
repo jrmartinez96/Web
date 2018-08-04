@@ -1,0 +1,29 @@
+
+.color-button{
+    opacity: 0.4;
+    flex-grow: 1;
+}
+
+.color-button.on{
+    opacity: 1.0;
+}
+
+.color-button.enable:active{
+    opacity: 1.0;
+}
+
+.color-button.top-left{
+    border-top-left-radius: 100%;
+}
+
+.color-button.top-right{
+    border-top-right-radius: 100%;
+}
+
+.color-button.bottom-left{
+    border-bottom-left-radius: 100%;
+}
+
+.color-button.bottom-right{
+    border-bottom-right-radius: 100%;
+}

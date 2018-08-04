@@ -1,0 +1,22 @@
+
+
+.button-start{
+    align-items: center;
+    background: rgb(132, 215, 218);
+    border-radius: 10px;
+    display: flex;
+    font-size: 1.2rem;
+    height: 3rem;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 10rem;
+}
+
+.button-start.disable{
+    display: none;
+}
+
+.button-start:hover{
+    background: rgb(116, 191, 194);
+    cursor: pointer;
+}

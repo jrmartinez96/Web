@@ -1,0 +1,10 @@
+.board{
+    height: 40rem;
+    width: 40rem;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    height: 20rem;
+}
