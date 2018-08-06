@@ -81,7 +81,7 @@ class SimonApp extends React.Component{
     /* addNewColor() genera un numero aleatorio entre 0 y 3 para meterlo en la secuencia de colores y despues
         recorre la secuencia */
     addNewColor = () => {
-        this.setState({bottomText:`Score: ${this.state.colorsList.length}`}); //Actualiza el score del jugador
+        this.setState({bottomText:`Score: ${this.state.colorsList.length * 100}`}); //Actualiza el score del jugador
         const randomNumber = Math.floor(Math.random() * 100) % 4; //Genera un numero aleatorio entre 0 y 99 y le hace modulo 4 para tener un numero entre 0 y 4
         let newColorsList = this.state.colorsList; //Obtiene la referencia del la secuencia de colores
         newColorsList.push(randomNumber); //Pushea el nuevo numero a la secuencia, como se lo pushea a la referencia se pushea en el estado
