@@ -1,29 +1,48 @@
+/*
+==========================================
+    Universidad del Valle de Guatemala
+    Sistemas y tecnologias web
 
+    Jose Martinez
+    15163
+
+    Laboratorio #4
+    color-button.css
+==========================================
+*/
+
+/* Define la proporcion del boton en el div flex y la opacidad standard*/
 .color-button{
-    opacity: 0.5;
     flex-grow: 1;
+    opacity: 0.5;
 }
 
-.color-button.on{
-    opacity: 1.0;
-}
-
-.color-button.enable:active{
-    opacity: 1.0;
-}
-
+/* Modifica el radio de una esquina para que se mire redondo el tablero */
 .color-button.top-left{
     border-top-left-radius: 100%;
 }
 
+/* Modifica el radio de una esquina para que se mire redondo el tablero */
 .color-button.top-right{
     border-top-right-radius: 100%;
 }
 
+/* Modifica el radio de una esquina para que se mire redondo el tablero */
 .color-button.bottom-left{
     border-bottom-left-radius: 100%;
 }
 
+/* Modifica el radio de una esquina para que se mire redondo el tablero */
 .color-button.bottom-right{
     border-bottom-right-radius: 100%;
+}
+
+/* Pone la opacidad al 100% cuando se enciende */
+.color-button.on{
+    opacity: 1.0;
+}
+
+/* Pone la opacidad al 100% cuando se presiona el boton y se encuentra activo */
+.color-button.enable:active{
+    opacity: 1.0;
 }

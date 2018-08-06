@@ -1,9 +1,24 @@
+/*
+==========================================
+    Universidad del Valle de Guatemala
+    Sistemas y tecnologias web
+
+    Jose Martinez
+    15163
+
+    Laboratorio #4
+    board.css
+==========================================
+*/
+
+/* Tablero */
 .board{
     height: 20rem;
-    width: 20rem;
     margin: 20px auto 0 auto;
+    width: 20rem;
 }
 
+/* Fila del tablero */
 .row{
     display: flex;
     height: 10rem;
