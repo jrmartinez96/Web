@@ -1,0 +1,42 @@
+.status-bar{
+    height: 5rem;
+    background: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status{
+    color: white;
+    display: flex;
+    width: 50rem;
+    flex-direction: column;
+    height: 4rem;
+}
+
+.local-weather{
+    flex-grow: 1;
+}
+
+.title{
+    flex-grow: 7;
+    display: flex;
+    align-items: center;
+}
+
+.weather-logo{
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.weather-logo img.logo{
+    width: 4rem;
+}
+
+.weather-title{
+    flex-grow: 3;
+    font-size: 1.5rem;
+}

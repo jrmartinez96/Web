@@ -1,0 +1,57 @@
+
+
+.city-not-found{
+    align-items: center;
+    background: rgb(252, 191, 191);
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.699);
+    bottom: 50px;
+    display: none;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 3.5rem;
+    justify-content: center;
+    left: 0;
+    margin: 0 auto;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    width: 20rem;
+}
+
+.city-not-found.able{
+    display: flex;
+}
+
+.search-box{
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.541);
+    display: flex;
+    height: 2.5rem;
+    margin: 15px auto;
+    width: 25rem;
+}
+
+.search-input{
+    flex-grow: 4;
+    width: 0;
+    border: none;
+    outline: none;
+    margin: auto 20px;
+    font-size: 1.5rem
+}
+
+.search-button{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(96, 146, 255, 0.959);
+    color: white;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+.search-button:hover{
+    background: rgba(77, 118, 206, 0.959);
+}
