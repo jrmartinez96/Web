@@ -1,3 +1,15 @@
+/*
+==========================================
+    Universidad del Valle de Guatemala
+    Sistemas y tecnologias web
+
+    Jose Martinez
+    15163
+
+    Laboratorio #5
+==========================================
+*/
+
 import React, {Fragment} from 'react';
 import StatusBar from "../status-bar";
 import WeatherInfo from "../weather-info";
@@ -10,9 +22,9 @@ class WeatherApp extends React.Component{
         super(props);
 
         this.state = {
-            weathers: [],
-            cityNotFound: false,
-            searchInput: '',
+            weathers: [], //Contiene todos los climas que se han buscado
+            cityNotFound: false, //Booleano que define si la alerta de "City not found" aparece en pantalla
+            searchInput: '', //Valor de lo que esta en el Input
         }
     }
 
