@@ -1,0 +1,45 @@
+/*
+==========================================
+    Universidad del Valle de Guatemala
+    Sistemas y tecnologias web
+
+    Jose Martinez
+    15163
+
+    Laboratorio #6
+==========================================
+*/
+
+.acc-box{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.column-names{
+    width: 80%;
+    display: flex;
+    margin: 15px auto;
+}
+
+.column-names div{
+    flex: 1;
+}
+
+.column-names div.name{
+    flex: 2;
+}
+
+.account-list-box{
+    background: rgb(233, 239, 247);
+    border-radius: 10px;
+    height: 25rem;
+    margin: 0 auto;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.total-price{
+    font-size: 4rem;
+    width: 90%;
+    margin: 0 auto;
+}
