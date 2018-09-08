@@ -1,0 +1,23 @@
+/*
+==========================================
+    Universidad del Valle de Guatemala
+    Sistemas y tecnologias web
+
+    Jose Martinez
+    15163
+
+    Laboratorio #7
+==========================================
+*/
+
+.comments-box{
+    width: 80%;
+    margin: auto 0 auto auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.comments{
+    width: 80%;
+    margin: 0 10px auto auto;
+}

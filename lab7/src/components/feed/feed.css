@@ -6,6 +6,17 @@
     Jose Martinez
     15163
 
-    Laboratorio #6
+    Laboratorio #7
 ==========================================
 */
+
+.feed{
+    width: 25rem;
+    margin: 15px auto;
+}
+
+@media (max-width: 900px) {
+    .feed{
+        width: 20rem;
+    }
+}

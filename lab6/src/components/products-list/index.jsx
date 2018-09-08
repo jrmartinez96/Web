@@ -13,7 +13,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import "./products-list.css";
 import ProductItem from "../product-item"
 import { productQuantityAdd, productQuantitySubstract, productSell, productUnsell } from "../../action-creators/products-action-creators";
 
