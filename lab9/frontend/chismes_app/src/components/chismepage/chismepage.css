@@ -1,0 +1,30 @@
+/*
+==========================================
+    Universidad del Valle de Guatemala
+    Sistemas y tecnologias web
+
+    Jose Martinez
+    15163
+
+    Laboratorio #9
+==========================================
+*/
+
+.chisme-title{
+    width: 50rem;
+    margin: 15px auto;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.chisme-date{
+    width: 50rem;
+    margin: 20px auto;
+    font-size: 1.5rem;
+}
+
+.chisme-description{
+    width: 50rem;
+    margin: 15px auto;
+    font-size: 2rem;
+}
