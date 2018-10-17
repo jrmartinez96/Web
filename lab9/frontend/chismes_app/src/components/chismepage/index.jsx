@@ -13,24 +13,26 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import NavBar from '../navBar';
-import { getChisme } from '../../reducers'
+import ChismeDescription from './chisme-description';
+import { getCurrentChisme } from '../../reducers'
+import * as actions from '../../actions';
 
 import './chismepage.css'
 
 class chismepage extends React.Component {
 
-    render(){
-        const { appState } = this.props;
+    componentDidMount(){
         const { chismeId } = this.props.match.params;
+        const { getChisme } = this.props;
+        getChisme(chismeId)
+    }
 
-        const chisme = getChisme(appState, chismeId);
-        const { title, description, creation_datetime } = chisme;
+    render(){
+
+        const { currentChisme } = this.props;
         return(
             <Fragment>
-                <NavBar title={`Chisme ${chismeId}`} />
-                <div className="chisme-title"> {title} </div>
-                <div className="chisme-date"> Fecha de creacion: <b>{creation_datetime.substring(0,10)}</b> </div>
-                <div className="chisme-description"> {description} </div>
+                {currentChisme === {} ? <NavBar /> : <ChismeDescription chisme={currentChisme}/>}
             </Fragment>
         )
     }
@@ -39,9 +41,16 @@ class chismepage extends React.Component {
 const mapStateToProps = (state) =>(
     {
         appState: state,
+        currentChisme: getCurrentChisme(state),
+    }
+);
+
+const mapDispatchToProps = (dispatch) => (
+    {
+        getChisme: (chismeId) => dispatch(actions.chismeApiRequest(chismeId))
     }
 )
 
-const Chismepage = connect(mapStateToProps, null)(chismepage);
+const Chismepage = connect(mapStateToProps, mapDispatchToProps)(chismepage);
 
 export default Chismepage;

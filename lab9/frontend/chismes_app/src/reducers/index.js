@@ -12,12 +12,14 @@
 
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
-import chismes from './chisme';
-import * as fromChismes from './chisme';
+import currentChisme from './currentChisme';
+import chismes from './chismes';
+import * as fromChismes from './chismes';
 
 
 /* REDUCERS */
 const reducer = combineReducers({
+    currentChisme,
     chismes,
     form: formReducer,
 })
@@ -28,3 +30,4 @@ export default reducer;
 /* SELECTORS */
 export const getChisme = (state, id) => fromChismes.getChisme(state.chismes, id);
 export const getOrderChismes = (state) => fromChismes.getOrderChismes(state.chismes);
+export const getCurrentChisme = (state) => state.currentChisme;

@@ -19,6 +19,12 @@ export const getChismesApi = () => new Promise (
         )
 );
 
+export const getChismeFromIdApi = (chismeId) => new Promise (
+    resolve => axios.get(`http://127.0.0.1:8000/api/v1/chismes/${chismeId}/`).then(
+        response => resolve(response.data)
+    )
+);
+
 export const postNewChismeApi = (title, description) =>( 
     axios.post('http://127.0.0.1:8000/api/v1/chismes/',{
         title: title,

@@ -60,3 +60,19 @@ export const chismesAppInitialize = () => (
         payload:{}
     }
 );
+
+export const chismeApiRequest = (chismeId) => (
+    {
+        type: types.CHISME_API_REQUESTED,
+        payload: {
+            chismeId,
+        }
+    }
+);
+
+export const chismeApiRecieve = (chisme) => (
+    {
+        type: types.CHISME_RECIEVED_FROM_API,
+        payload: {...chisme}
+    }
+)
